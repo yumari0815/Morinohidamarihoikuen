@@ -1,0 +1,1879 @@
+/* --- 全体共通 --- */
+
+body {
+
+    margin: 0;
+
+    padding: 0;
+
+    background-image: url('images/haikei.png');
+
+    font-family: "Hiragino Maru Gothic ProN", sans-serif;
+
+    color: #5d4a3e;
+
+    overflow-x: hidden;
+
+    /* 横はみ出し防止 */
+
+}
+
+
+
+img {
+
+    max-width: 100%;
+
+    height: auto;
+
+}
+
+
+
+/* --- ヘッダー共通・PC構造調整 --- */
+
+.site-header {
+
+    padding: 20px 0;
+
+    position: relative;
+
+    z-index: 100;
+
+}
+
+
+
+.header-inner {
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 0 20px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: flex-end;
+
+    position: relative;
+
+    gap: 40px;
+
+}
+
+
+
+.nav-container {
+
+    display: flex;
+
+    align-items: flex-end;
+
+}
+
+
+
+.nav-group {
+
+    display: flex;
+
+    gap: 25px;
+
+}
+
+
+
+.nav-item {
+
+    text-decoration: none;
+
+    color: inherit;
+
+    font-size: 12px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 5px;
+
+}
+
+
+
+.nav-item img {
+
+    height: 35px;
+
+}
+
+
+
+.logo {
+
+    margin: 0;
+
+}
+
+
+
+.logo img {
+
+    width: 320px;
+
+    display: block;
+
+}
+
+
+
+/* 初期状態（PC表示）はスマホメニュー要素を隠す */
+
+.menu-trigger,
+
+.sp-nav {
+
+    display: none;
+
+}
+
+
+
+/* --- メインビジュアル（PC） --- */
+
+.main-visual {
+
+    position: relative;
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    min-height: 1000px;
+
+}
+
+
+
+.photo-container {
+
+    text-align: center;
+
+    position: relative;
+
+    z-index: 5;
+
+    padding-top: 40px;
+
+}
+
+
+
+.main-photo {
+
+    display: block;
+
+    margin: 0 auto;
+
+    width: 100%;
+
+    max-width: 850px;
+
+}
+
+
+
+/* --- 根っこ＆「想い」セクション --- */
+
+.roots-section {
+
+    position: relative;
+
+    margin-top: -250px;
+
+    z-index: 1;
+
+    width: 100%;
+
+    text-align: center;
+
+}
+
+
+
+.soil {
+
+    display: none;
+
+
+}
+
+
+
+.roots-wrap {
+
+    position: relative;
+
+    display: inline-block;
+
+}
+
+
+
+.roots {
+
+    width: 100%;
+
+    max-width: 680px;
+
+    display: block;
+
+}
+
+
+
+.omoi-content {
+
+    position: absolute;
+
+    top: 30%;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 90%;
+
+    max-width: 710px;
+
+    z-index: 31;
+
+}
+
+
+
+.omoi-title {
+
+    font-size: 25px;
+
+    font-family: "Klee", "Yuji Syuku", serif;
+
+    color: rgb(74, 57, 51);
+
+    line-height: 1.2;
+
+    margin-bottom: 25px;
+
+    white-space: nowrap;
+
+}
+
+
+
+.omoi-text {
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    color: rgb(74, 57, 51);
+
+    margin: 0;
+
+}
+
+
+
+.dandelion {
+
+    position: absolute;
+
+    left: 10%;
+
+    top: 40%;
+
+    width: 35px;
+
+}
+
+
+
+.anemone {
+
+    position: absolute;
+
+    right: 12%;
+
+    top: 35%;
+
+    width: 40px;
+
+}
+
+
+
+.omoi-owl-blue {
+
+    position: absolute;
+
+    left: -5%;
+
+    bottom: 2%;
+
+    width: 55px;
+
+    z-index: 30;
+
+}
+
+
+
+.omoi-owl-brown {
+
+    position: absolute;
+
+    right: -5%;
+
+    bottom: 2%;
+
+    width: 40px;
+
+    z-index: 30;
+
+}
+
+
+
+.owl-branch-box {
+
+    position: absolute;
+
+    top: 60px;
+
+    right: 30px;
+
+    width: 250px;
+
+    z-index: 10;
+
+}
+
+
+
+.owls-main-img {
+
+    width: 100%;
+
+    display: block;
+
+}
+
+
+
+.blink-eyes {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+}
+
+
+
+.eye-close {
+
+    display: none;
+
+}
+
+
+
+.eye-blue {
+
+    top: 25%;
+
+    left: 32%;
+
+}
+
+
+
+.eye-brown {
+
+    top: 28%;
+
+    left: 55%;
+
+    animation-delay: 2s;
+
+}
+
+
+
+@keyframes blink {
+
+
+
+    0%,
+
+    90%,
+
+    100% {
+
+        opacity: 0;
+
+    }
+
+
+
+    92%,
+
+    96% {
+
+        opacity: 1;
+
+    }
+
+}
+
+
+
+.decoration-trees {
+
+    position: absolute;
+
+    bottom: 450px;
+
+    left: 20px;
+
+    z-index: 15;
+
+    display: flex;
+
+    align-items: flex-end;
+
+}
+
+
+
+.tree1 {
+
+    width: 100px;
+
+}
+
+
+
+.tree2 {
+
+    width: 70px;
+
+    margin-left: -20px;
+
+    margin-bottom: 80px;
+
+}
+
+
+
+/* --- メニューセクション --- */
+
+.menu-section {
+
+    max-width: 1100px;
+
+    margin: 150px auto 100px;
+
+    position: relative;
+
+}
+
+
+
+.menu-container {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: flex-end;
+
+    gap: 20px;
+
+}
+
+
+
+.menu-item {
+
+    text-decoration: none;
+
+    color: #5d4a3e;
+
+    text-align: center;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    transition: transform 0.3s;
+
+}
+
+
+
+.menu-item:hover .menu-photo-wrap,
+
+.menu-item:hover .menu-label {
+
+    transform: scale(1.05);
+
+}
+
+
+
+.menu-photo-wrap {
+
+    width: 240px;
+
+    margin-bottom: 10px;
+
+    position: relative;
+
+    transition: transform 0.3s;
+
+}
+
+
+
+.menu-photo {
+
+    width: 100%;
+
+    height: auto;
+
+    display: block;
+
+}
+
+
+
+.menu-label {
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 10px;
+
+    transition: transform 0.3s;
+
+}
+
+
+
+.label-icon {
+
+    position: absolute;
+
+    width: 45px;
+
+    z-index: 5;
+
+}
+
+
+
+.item-nyuuen .label-icon {
+
+    right: 40px;
+
+    bottom: -50px;
+
+}
+
+
+
+.item-tokutyou .label-icon {
+
+    right: 25px;
+
+    top: -10px;
+
+}
+
+
+
+.item-itiniti .label-icon {
+
+    right: 20px;
+
+    bottom: -10px;
+
+}
+
+
+
+.item-sisetsu .label-icon {
+
+    right: 35px;
+
+    bottom: -35px;
+
+}
+
+
+
+.item-tokutyou {
+
+    margin-bottom: 120px;
+
+}
+
+
+
+.item-itiniti {
+
+    margin-bottom: 20px;
+
+}
+
+
+
+.item-sisetsu {
+
+    margin-bottom: 100px;
+
+}
+
+
+
+.bg-deco {
+
+    position: absolute;
+
+    z-index: -1;
+
+    pointer-events: none;
+
+}
+
+
+
+.deco-tree-left-big {
+
+    width: 110px;
+
+    left: -130px;
+
+    bottom: -10px;
+
+}
+
+
+
+.deco-dandelion-left {
+
+    width: 35px;
+
+    left: 300px;
+
+    top: -60px;
+
+}
+
+
+
+.deco-dandelion-right {
+
+    width: 40px;
+
+    right: 300px;
+
+    top: -35px;
+
+}
+
+
+
+.deco-anemone {
+
+    width: 45px;
+
+    right: 200px;
+
+    top: 350px;
+
+}
+
+
+
+.deco-tree-center {
+
+    width: 70px;
+
+    left: 50px;
+
+    bottom: 300px;
+
+}
+
+
+
+.deco-tree-right-small {
+
+    width: 60px;
+
+    right: 550px;
+
+    bottom: 30px;
+
+}
+
+
+
+.deco-tree-right-far {
+
+    width: 100px;
+
+    right: -140px;
+
+    bottom: -15px;
+
+}
+
+
+
+/* --- 森の便りセクション --- */
+
+.blog-section {
+
+    max-width: 1000px;
+
+    margin: 150px auto 100px;
+
+    padding: 10px 40px 60px;
+
+    background-color: #fdfae6;
+
+    position: relative;
+
+    border-radius: 5px;
+
+}
+
+
+
+.blog-title-area {
+
+    position: relative;
+
+    margin-bottom: 40px;
+
+}
+
+
+
+.pick-up {
+
+    font-family: "Courier New", Courier, monospace;
+
+    font-weight: bold;
+
+    color: #5d4a3e;
+
+    transform: rotate(-10deg);
+
+    display: inline-block;
+
+    margin-bottom: 0px;
+
+}
+
+
+
+.blog-main-title {
+
+    display: flex;
+
+    align-items: flex-end;
+
+    gap: 10px;
+
+    margin: 0;
+
+}
+
+
+
+.blog-main-title img {
+
+    width: 200px;
+
+    display: block;
+
+}
+
+
+
+.blog-sub-text {
+
+    font-size: 14px;
+
+    color: #5d4a3e;
+
+    font-family: serif;
+
+    padding-bottom: 5px;
+
+}
+
+
+
+.post-list {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 30px;
+
+}
+
+
+
+.post-item {
+
+    flex: 1;
+
+    max-width: 280px;
+
+    position: relative;
+
+}
+
+
+
+.post-img-wrap {
+
+    width: 100%;
+
+    aspect-ratio: 4 / 3;
+
+    overflow: hidden;
+
+    border: 1px solid #5d4a3e;
+
+    margin-bottom: 15px;
+
+    background-color: #fff;
+
+}
+
+
+
+.post-img-wrap img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.3s;
+
+}
+
+
+
+.post-item:hover .post-img-wrap img {
+
+    transform: scale(1.1);
+
+}
+
+
+
+.post-date {
+
+    display: block;
+
+    font-size: 11px;
+
+    color: #888;
+
+    margin-bottom: 5px;
+
+}
+
+
+
+.post-title {
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    color: #5d4a3e;
+
+    margin: 0;
+
+}
+
+
+
+.deco-bird-post {
+
+    position: absolute;
+
+    width: 60px;
+
+    right: 280px;
+
+    top: 150px;
+
+    z-index: 5;
+
+}
+
+
+
+.deco-imo-post {
+
+    position: absolute;
+
+    width: 100px;
+
+    right: 280px;
+
+    top: 200px;
+
+    z-index: 5;
+
+}
+
+
+
+.deco-dandelion-outer-left {
+
+    position: absolute;
+
+    width: 35px;
+
+    left: -45px;
+
+    bottom: 40px;
+
+    z-index: 10;
+
+}
+
+
+
+.deco-dandelion-outer-right {
+
+    position: absolute;
+
+    width: 30px;
+
+    right: -40px;
+
+    top: 50%;
+
+    z-index: 10;
+
+}
+
+
+
+/* --- フッターセクション（PC基準） --- */
+
+.site-footer {
+
+    background-color: #3e7d5c;
+
+    color: #fff;
+
+    padding: 60px 0 20px;
+
+    position: relative;
+
+}
+
+
+
+.footer-container {
+
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-end;
+
+    position: relative;
+
+    padding-bottom: 40px;
+
+}
+
+
+
+.footer-info {
+
+    z-index: 10;
+
+}
+
+
+
+.footer-logo img {
+
+    width: 220px;
+
+    margin-bottom: 20px;
+
+}
+
+
+
+.footer-address {
+
+    font-size: 14px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 20px;
+
+}
+
+
+
+.map-link img {
+
+    width: 50px;
+
+}
+
+
+
+.footer-nav {
+
+    display: flex;
+
+    gap: 20px;
+
+}
+
+
+
+.footer-nav a {
+
+    color: #fff;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+}
+
+
+
+.footer-contact {
+
+    position: relative;
+
+    z-index: 10;
+
+    margin-right: auto;
+
+    margin-left: 190px;
+
+    margin-bottom: 20px;
+
+}
+
+
+
+.contact-wrap {
+
+    color: #5d4a3e;
+
+    padding-right: 20px;
+
+}
+
+
+
+.contact-title {
+
+    font-size: 14px;
+
+    margin-bottom: 5px;
+
+}
+
+
+
+.tel {
+
+    font-size: 24px;
+
+    font-weight: bold;
+
+    margin: 0;
+
+}
+
+
+
+.time {
+
+    font-size: 12px;
+
+}
+
+
+
+.footer-house-area {
+
+    position: absolute;
+
+    right: 40px;
+
+    bottom: 20px;
+
+    width: 150px;
+
+    height: 200px;
+
+    z-index: 5;
+
+}
+
+
+
+.footer-house {
+
+    width: 70px;
+
+    position: absolute;
+
+    right: 50px;
+
+    bottom: -20px;
+
+    z-index: 10;
+
+}
+
+
+
+.smoke {
+
+    position: absolute;
+
+    pointer-events: none;
+
+    z-index: 4;
+
+}
+
+
+
+.smoke-house-s {
+
+    width: 15px;
+
+    right: 120px;
+
+    bottom: 55px;
+
+}
+
+
+
+.smoke-house-m {
+
+    width: 25px;
+
+    right: 150px;
+
+    bottom: 60px;
+
+}
+
+
+
+.smoke-house-l {
+
+    width: 300px !important;
+
+    max-width: none !important;
+
+    right: 200px !important;
+
+    bottom: 10px !important;
+
+    display: block !important;
+
+}
+
+
+
+.copyright {
+
+    text-align: center;
+
+    font-size: 10px;
+
+    margin-top: 40px;
+
+    opacity: 0.7;
+
+}
+
+
+
+
+
+/* ==========================================================================
+
+📱 レスポンシブ対応（900px以下：タブレット・スマホ共通）
+
+========================================================================== */
+
+@media screen and (max-width: 900px) {
+
+
+
+    /* --- ヘッダー（ハンバーガーメニュー化） --- */
+
+    .header-inner {
+
+        justify-content: space-between;
+
+        align-items: center;
+
+        padding: 10px 20px;
+
+    }
+
+
+
+    .logo img {
+
+        width: 180px;
+
+    }
+
+
+
+    /* PCナビを完全非表示 */
+
+    .pc-nav-left,
+
+    .pc-nav-right {
+
+        display: none !important;
+
+    }
+
+
+
+    /* メニューボタンデザイン */
+
+    .menu-trigger {
+        display: block !important;
+        /* 強制的に表示させる */
+        position: relative;
+        width: 44px;
+        height: 44px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        z-index: 200;
+    }
+
+
+    .menu-trigger span {
+
+        display: inline-block;
+
+        transition: all .4s;
+
+        position: absolute;
+
+        left: 10px;
+
+        width: 24px;
+
+        height: 2px;
+
+        background-color: #5d4a3e;
+
+        border-radius: 2px;
+
+    }
+
+
+
+    .menu-trigger span:nth-of-type(1) {
+
+        top: 14px;
+
+    }
+
+
+
+    .menu-trigger span:nth-of-type(2) {
+
+        top: 21px;
+
+    }
+
+
+
+    .menu-trigger span:nth-of-type(3) {
+
+        top: 28px;
+
+    }
+
+
+
+    /* × に変化 */
+
+    .menu-trigger.active span:nth-of-type(1) {
+
+        transform: translateY(7px) rotate(-45deg);
+
+    }
+
+
+
+    .menu-trigger.active span:nth-of-type(2) {
+
+        opacity: 0;
+
+    }
+
+
+
+    .menu-trigger.active span:nth-of-type(3) {
+
+        transform: translateY(-7px) rotate(45deg);
+
+    }
+
+
+
+    /* 全画面引き出しナビ */
+
+    .sp-nav {
+
+        display: block;
+
+        position: fixed;
+
+        top: 0;
+
+        left: 0;
+
+        width: 100%;
+
+        height: 100vh;
+
+        background-color: rgba(253, 250, 230, 0.95);
+
+        z-index: 150;
+
+        opacity: 0;
+
+        pointer-events: none;
+
+        transition: opacity 0.4s ease;
+
+    }
+
+
+
+    .sp-nav.active {
+
+        opacity: 1;
+
+        pointer-events: auto;
+
+    }
+
+
+
+    .sp-nav-inner {
+
+        height: 100%;
+
+        display: flex;
+
+        flex-wrap: wrap;
+
+        align-content: center;
+
+        justify-content: center;
+
+        gap: 30px 20px;
+
+        padding: 40px;
+
+        max-width: 400px;
+
+        margin: 0 auto;
+
+    }
+
+
+
+    .sp-nav-item {
+
+        width: calc(50% - 10px);
+
+        text-decoration: none;
+
+        color: #5d4a3e;
+
+        font-size: 14px;
+
+        font-weight: bold;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 8px;
+
+    }
+
+
+
+    .sp-nav-item img {
+
+        height: 40px;
+
+        width: auto;
+
+    }
+
+
+
+    /* --- メインビジュアル（900px以下） --- */
+
+    .main-visual {
+
+        min-height: auto;
+
+        /* 固定の高さをリセット */
+
+        padding-bottom: 80px;
+
+        /* 根っこセクションがはみ出さないための余白 */
+
+    }
+
+
+
+    /* 幹・根っこエリアの引き上げ調整 */
+
+    .roots-section {
+
+        margin-top: -22%;
+
+        /* 固定pxではなく、画面幅（写真の縮小）に連動して引き上げる */
+
+    }
+
+
+
+    .owl-branch-box {
+
+        width: 180px;
+
+        top: 20px;
+
+    }
+
+
+
+    .omoi-title {
+
+        font-size: 20px;
+
+    }
+
+
+
+    /* --- メニューセクション（900px以下） --- */
+
+    .menu-container {
+
+        flex-wrap: wrap;
+
+        gap: 40px 20px;
+
+    }
+
+
+
+    .menu-photo-wrap {
+
+        width: 45vw;
+
+    }
+
+
+
+    .item-nyuuen,
+
+    .item-tokutyou,
+
+    .item-itiniti,
+
+    .item-sisetsu {
+
+        margin-bottom: 0;
+
+    }
+
+
+
+    /* --- フッター（900px以下：中央配置＆煙全表示） --- */
+
+    .footer-container {
+
+        flex-direction: column;
+
+        align-items: center;
+
+        text-align: center;
+
+        gap: 0;
+
+        position: relative;
+
+        padding-bottom: 260px;
+
+        /* スペース確保 */
+
+    }
+
+
+
+    .footer-info {
+
+        margin-bottom: 40px;
+
+    }
+
+
+
+    .footer-nav {
+
+        justify-content: center;
+
+    }
+
+
+
+    /* 問い合わせ文章：中央かつ煙（大）の手前に重ねる */
+
+    .footer-contact {
+
+        position: absolute;
+
+        bottom: 75px;
+
+        left: 50%;
+
+        transform: translateX(-50%);
+
+        margin: 0;
+
+        width: 280px;
+
+        z-index: 15;
+
+    }
+
+
+
+    .contact-wrap {
+
+        padding-right: 0;
+
+        text-align: center;
+
+    }
+
+
+
+    /* 家とすべての煙のベースコンテナ */
+
+    .footer-house-area {
+
+        position: absolute;
+
+        left: 50%;
+
+        bottom: 0;
+
+        transform: translateX(-50%);
+
+        width: 100%;
+
+        height: 260px;
+
+        margin-top: 0;
+
+        pointer-events: none;
+
+    }
+
+
+
+    /* 煙・大（背景化） */
+
+    .smoke-house-l {
+
+        width: 320px !important;
+
+        left: 50% !important;
+
+        right: auto !important;
+
+        bottom: 20px !important;
+
+        transform: translateX(-50%);
+
+        z-index: 4;
+
+        display: block !important;
+
+    }
+
+
+
+    /* お家（右下にずらす） */
+
+    .footer-house {
+
+        width: 65px;
+
+        left: calc(50% + 75px);
+
+        right: auto !important;
+
+        bottom: 0px !important;
+
+        z-index: 10;
+
+    }
+
+
+
+    /* 煙・小 */
+
+    .smoke-house-s {
+
+        width: 14px !important;
+
+        left: calc(50% + 77px);
+
+        right: auto !important;
+
+        bottom: 50px !important;
+
+        z-index: 3;
+
+        display: block !important;
+
+    }
+
+
+
+    /* 煙・中 */
+
+    .smoke-house-m {
+
+        width: 22px !important;
+
+        left: calc(50% + 45px);
+
+        right: auto !important;
+
+        bottom: 60px !important;
+
+        z-index: 3;
+
+        display: block !important;
+
+    }
+
+}
+
+
+
+/* ==========================================================================
+
+📱 スマホ対応（600px以下：スマートフォン個別調整）
+
+========================================================================== */
+
+@media screen and (max-width: 600px) {
+
+    .nav-item {
+
+        font-size: 10px;
+
+    }
+
+
+
+    .nav-item img {
+
+        height: 25px;
+
+    }
+
+
+
+    .owl-branch-box {
+
+        width: 120px;
+
+        right: 10px;
+
+    }
+
+
+
+    .decoration-trees {
+
+        bottom: 380px;
+
+        left: 10px;
+
+    }
+
+
+
+    .tree1 {
+
+        width: 60px;
+
+    }
+
+
+
+    .tree2 {
+
+        width: 45px;
+
+        margin-bottom: 40px;
+
+
+    }
+
+
+
+    .roots-section {
+
+        margin-top: -25%;
+
+        /* スマホ時はさらに少し上に引き上げて写真を重ねる */
+
+    }
+
+
+
+    .omoi-title {
+
+        font-size: 18px;
+
+        white-space: normal;
+
+    }
+
+
+
+    .omoi-text {
+
+        font-size: 14px;
+
+        line-height: 1.6;
+
+    }
+
+
+    .omoi-content {
+        position: absolute;
+        z-index: 99 !important;
+        /* 写真（z-index: 5）よりも圧倒的に手前に表示させる */
+        top: −70%;
+        /* 必要に応じて文字の位置（高さ）を調整してください */
+    }
+
+
+
+    .omoi-owl-blue,
+
+    .omoi-owl-brown {
+
+        width: 40px;
+
+        bottom: 20%;
+
+    }
+
+
+
+    .menu-label {
+
+        font-size: 14px;
+
+    }
+
+
+
+    .label-icon {
+
+        width: 30px;
+
+    }
+
+}
